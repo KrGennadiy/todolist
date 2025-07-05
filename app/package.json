@@ -1,0 +1,23 @@
+{
+  "name": "vue-project",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-cli-service build",
+    "start": "vue-cli-service serve"
+  },
+  "dependencies": {
+    "axios": "^1.10.0",
+    "vue": "*"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "*",
+    "@vue/cli": "*",
+    "@vue/cli-service": "*",
+    "vite": "^6.3.5",
+    "vite-plugin-vue-devtools": "*",
+    "vue": "*"
+  }
+}
