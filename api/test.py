@@ -21,7 +21,6 @@ app.add_middleware(
 engine = create_engine("postgresql://postgres:root@localhost:5432/tododb")
 base = declarative_base()
 
-
 class TaskDB(base):
     __tablename__ = "tasks"
     id = Column(Integer, primary_key=True)
