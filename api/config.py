@@ -1,0 +1,5 @@
+LOGIN_DATABASE = 'postgres'
+PASSWORD_DATABASE = 'root'
+HOST_DATABASE = 'localhost'
+PORT_DATABASE = '5432'
+NAME_DATABASE = 'tododb'
