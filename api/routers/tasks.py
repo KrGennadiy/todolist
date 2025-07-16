@@ -2,18 +2,18 @@ from fastapi import APIRouter
 from api.database import TaskDB, session
 from schemas import PushTask, DeleteTask
 
-router = APIRouter(
-    prefix='/tasks'
-    tags='tasks'
+router_tasks = APIRouter(
+    prefix='/tasks',
+    tags=['tasks']
 )
 
-@router.get("/")
+@router_tasks.get("/")
 async def tasks_to_front():
     answer = session.query(TaskDB).all()
     return answer
 
 
-@router.post("/")
+@router_tasks.post("/")
 async def createTask(task: PushTask):
     try:
         taskdb = TaskDB(text=task.text)
@@ -24,7 +24,7 @@ async def createTask(task: PushTask):
         return {"error": str(error)}
 
 
-@router.delete("/")
+@router_tasks.delete("/")
 async def delete_task(task: DeleteTask):
     try:
         taskdb = TaskDB(id=task.id)
