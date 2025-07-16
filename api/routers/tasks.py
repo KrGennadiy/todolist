@@ -1,5 +1,5 @@
 from fastapi import APIRouter 
-from api.database import TaskDB, session
+from database import TaskDB, session
 from schemas import PushTask, DeleteTask
 
 router_tasks = APIRouter(

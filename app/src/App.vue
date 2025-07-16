@@ -41,12 +41,12 @@ export default {
 	},
 	methods: {
 		pullFromBack() {
-			api.post('/pullTask')
+			api.get('/tasks')
 				.then(response => { this.tasks = response.data }, console.log(this.tasks))
 				.catch(error => console.error(error))
 		},
 		pushToBack() {
-			api.post('/pushTask', { text: this.textTask })
+			api.post('/tasks', { text: this.textTask })
 				.then(response => console.log(response.text))
 				.catch(error => console.error(error))
 
@@ -55,7 +55,7 @@ export default {
 			this.textTask = ''
 		},
 		deleteTask(index) {
-			api.post('/deleteTask', { id: index }, {_method: 'delete'}
+			api.delete('/tasks', { id: index }
 			)
 				.then(response => console.log(response.data))
 				.catch(error => console.error(error))
