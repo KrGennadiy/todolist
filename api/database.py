@@ -3,7 +3,8 @@ from sqlalchemy.orm import declarative_base
 from sqlalchemy.orm import sessionmaker
 from config import LOGIN_DATABASE, PASSWORD_DATABASE, HOST_DATABASE, PORT_DATABASE, NAME_DATABASE
 
-engine = create_engine(f"postgresql://{LOGIN_DATABASE}:{PASSWORD_DATABASE}@{HOST_DATABASE}:{PORT_DATABASE}/{NAME_DATABASE}")
+PATH_URL = f"postgresql://{LOGIN_DATABASE}:{PASSWORD_DATABASE}@{HOST_DATABASE}:{PORT_DATABASE}/{NAME_DATABASE}"
+engine = create_engine(PATH_URL)
 base = declarative_base()
 
 class TaskDB(base):

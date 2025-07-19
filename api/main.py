@@ -21,4 +21,4 @@ async def root():
     return {"message": "root is work"}
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="localhost", port=8088)
+    uvicorn.run('main:app', host="localhost", port=8088)
