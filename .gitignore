@@ -1,7 +1,7 @@
 app/node_modules
+app/.vscode
 api/__pycache__
 api/routers/__pycache__
-db
-app/.vscode
 alembic/versions
 alembic/__pycache__
+db
